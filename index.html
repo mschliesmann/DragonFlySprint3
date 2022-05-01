@@ -1,0 +1,263 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <title>99 Days of Summer Challenge</title>
+    <link rel="shortcut icon" href="clock-icon.png">
+    <script src="https://kit.fontawesome.com/e04a445c36.js" crossorigin="anonymous"></script>
+    <style>
+        #background{
+            background-color:orange;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <div class="navbar has-background-danger-dark">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <!--Logo-->
+                <a href="">
+                    <i class="fa-2x fa-solid fa-clock has-text-white"></i>
+                </a>
+            </div>
+            <div class="navbar-item">
+                <a class="has-text-white" href="https://www.dragonflyhotyoga.com">DragonFly</a>
+            </div>
+        </div>
+        <div class="navbar-menu is-active">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <a id="signoutbtn" class="has-text-white loggedin">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Columns-->
+    <div class="section" id="background">
+        <div id="main" class="container">
+            <!--Default columns take size 12-->
+            <div class="columns">
+                <!--Side Navigation-->
+                <div class="column is-3 has-background-danger-dark p-5 ml-3">
+                    <div class="card m-2">
+                        <div class="card-header-title is-centered has-background-white-bis has-text-centered">
+                            <h1 class="title is-4">Schedule A Class</h1>
+                        </div>
+                        <div class="card-content has-background-white">
+                            <p class="title is-7 has-text-centered"><a href="https://www.dragonflyhotyoga.com/schedule/">View our current schedule here!
+                            </a></p>
+                        </div>
+                        <div class="card-content pt-1 has-background-white">
+                            <figure class="image">
+                                <img style = "width: 400px; height: 200px;" src="99Day_challenge_card_outside.jpg" alt="Dragon Fly">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-header-title is-centered has-background-white-bis">
+                            <h1 class="title is-5">Connect with Us</h1>
+                        </div>
+                        <div class="card-content p-4 has-background-white">
+                            <div class="content has-text-centered">
+                                <a href="https://www.facebook.com/DragonflyHotYoga"><i class="fab fa-2x fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/dflyhotyoga"><i class="ml-2 fab fa-2x fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/dflyhotyoga/"><i class="ml-2 fab fa-2x fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Main Content-->
+                <div id="main_content" class="column p-6 has-background-danger-dark ml-3">
+                    <h1 class="title is-1 p-3 has-text-centered has-background-white p-1" style="border-radius: 50px;">99 Days of Summer Challenge Portal</h1>
+                    <div class="title is-5 has-text-centered has-text-white">
+                        <p>Welcome to DragonFly's 99 Days of Summer Challenge Portal!</p>
+                    </div>
+                    <div class="p-5 has-text-centered has-text-white">
+                        Track your success and log your classes by creating an account with us.
+                    </div>
+                    <div class="p-5 has-text-centered has-text-white">
+                        Complete all 99 days of the challenge to receive exclusive DragonFly merch and more! 
+                    </div>
+                </div>
+
+               <div id="signedIn_content" class="column p-6 has-background-danger-dark ml-3 is-hidden">
+
+               </div>
+
+                <!--Related Content-->
+                <div id="signin_signout" class="column is-3 has-background-danger-dark p-5 ml-3">
+                    <div class="card m-2">
+                        <div class="card-header-title is-centered has-background-white-bis">
+                            <h1 class="title is-4">Sign Up</h1>
+                        </div>
+                        <div class="card-content p-2 has-background-white">
+                            <div class="content has-text-centered">
+                                <div class="has-text-centered p-2">
+                                    <p>Looking to join the challenge?</p>
+                                    <p>Create an account to start tracking your success!</p>
+                                </div>
+                                <form id = "signup_form">
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa-solid fa-signature"></i>
+                                            </span>
+                                            <input type="text" id="firstName" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fa-solid fa-signature"></i>
+                                            </span>
+                                            <input type="text" id="lastName" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <input type="email" id="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                            <input type="password" id="password" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                          <div class="select">
+                                            <select id="challenge_type">
+                                              <option>Challenge Type</option>
+                                              <option value="40">40 Classes</option>
+                                              <option value="50">50 Classes</option>
+                                              <option value="60">60 Classes</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                          <div class="select">
+                                            <select id="pickup">
+                                              <option>Pickup Location</option>
+                                              <option>Downtown</option>
+                                              <option>Fitchburg</option>
+                                              <option>Middleton</option>
+                                              <option>Sun Prarie</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="m-3 button is-bordered has-text-centered" id="signupbtn">Sign Up</button>
+                                        </div>
+                                    </div>
+                                    <div class="error has-text-danger" id="signup_error">
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-content p-2 has-background-white">
+                            <div class="content has-text-centered">
+                                <div class="card-header-title is-centered has-background-white-bis">
+                                    <h1 class="title is-6">Already a Member?</h1>
+                                </div>
+                                <div class="has-text-centered p-1 m-1">
+                                    <p>Sign in!</p>
+                                </div>
+                                <form id = "signin_form">
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <input type="email" id="email_" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-lock"></i>
+                                            </span>
+                                            <input type="password" id="password_" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="m-3 button is-bordered has-text-centered" id="signinbtn">Sign In</button>
+                                        </div>
+                                    </div>
+                                    <div class="error has-text-danger" id="signin_error">
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="prize_content" class="column is-3 has-background-danger-dark p-5 ml-3 is-hidden">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer" style="background:orange">
+        <div class="content has-text-centered">
+            <div>
+                Copyright &copy; 2021 99 Days of Summer Challenge<br>
+            </div>
+        </div>
+    </div>
+
+     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+ 
+     <!-- Add Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+        // TODO
+        // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+        // Your web app's Firebase configuration 
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZ3CsFxVZ5a8lQTIFEkKLGa6p-YwV5Z60",
+            authDomain: "daysofsummer-2f297.firebaseapp.com",
+            projectId: "daysofsummer-2f297",
+            storageBucket: "daysofsummer-2f297.appspot.com",
+            messagingSenderId: "111013256121",
+            appId: "1:111013256121:web:a4dc618e2199375a693468"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // define authentication variable
+        let auth = firebase.auth();
+        let db = firebase.firestore();
+
+        // define a storage reference
+        let ref = firebase.storage().ref();
+    </script>
+     <!-- make sure to add your own js file as the last line in index.html file -->
+     <script src="app.js"></script>
+
+
+</body>
+</html>
